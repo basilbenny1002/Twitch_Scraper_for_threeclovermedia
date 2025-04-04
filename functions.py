@@ -18,7 +18,6 @@ from datetime import datetime, date
 
 
 
-# Define the scope (read-only access to Gmail)
 #SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 def get_service():
