@@ -307,7 +307,7 @@ def add_label(label_name: str, mail_id):
 def send_mail(message: str, mail_id: str, subject: str):
     s = smtplib.SMTP("smtp.gmail.com", 587)
     s.starttls()
-    s.login("Ank@threeclovermedia.com", "iojw uppy ztsn sjdv")
+    s.login(os.getenv("mail"), os.getenv("pass"))
     msg = MIMEText(message, 'html')
     sender = "Ank@threeclovermedia.com"
     msg["Subject"] = subject    #f"Let’s Work Together – {str(usernames[i]).capitalize()} x Three Clover Media"
