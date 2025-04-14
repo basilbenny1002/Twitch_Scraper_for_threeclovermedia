@@ -1,15 +1,16 @@
 #necessary imports
 import os
-
 import pandas
 from functions import get_follower_count, scrape_twitch_about, scrape_twitter_profile, extract_emails, scrape_youtube, get_live_streams, is_valid_email, get_subscriber_count, is_valid_text, get_twitch_game_id
 import pandas as pd
 from tqdm import tqdm
 import logging
 import datetime
+from dotenv import load_dotenv
+import threading
+import queue
 today = datetime.date.today()
 yesterday = today - datetime.timedelta(days=1)
-from dotenv import load_dotenv
 load_dotenv()
 
 access_token = os.getenv("access_token") #TODO: paste your access token here
